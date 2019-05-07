@@ -10,8 +10,12 @@ const schema = new Schema({
     type: String, 
     required: true
   },
-  description: {
+  medium: {
     type: String, 
+    required: true
+  },
+  size: {
+    type: String,
     required: true
   },
   price: {
