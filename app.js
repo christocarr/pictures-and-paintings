@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
-mongoose.connect('localhost: 27017/pictures-and-paintings');
+mongoose.connect('mongodb://localhost:27017/pictures-and-paintings',{ useNewUrlParser: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
