@@ -1,6 +1,15 @@
 <% include ../partials/header %>
 
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <section>
+        <h3>Gallery</h3>
+        <div class="gallery-wrapper">
+        <% products.forEach(function(painting) { %>
+            <div class="gallery-item">
+                <img src="<%= painting.imagePath %>" alt="<%= painting.title %> painting">
+            </div>
+        <% }) %>
+       
+        </div>
+    </section>
  
  <% include ../partials/footer %>
