@@ -207,7 +207,58 @@ nav {
 /*-------------------------------------------
                end banner styles
 -------------------------------------------*/
+/*-------------------------------------------
+            gallery section styles
+-------------------------------------------*/
 
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+}
+
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--main-bg-color);
+}
+
+.gallery h3 {
+  width: 80%;
+  margin: 2em 0 0 0;;
+}
+
+.gallery-item {
+  position: relative;
+  width: 80%;
+  margin: 1em 0 0 0;
+  overflow: hidden;
+
+}
+
+.gallery-item:last-of-type {
+  margin: 1em 0 1em 0;
+}
+
+.gallery-item img {
+  width: 100%;
+  transition: all 1.7s ease;
+}
+
+.gallery-item img:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+/*-------------------------------------------
+            end gallery section styles
+-------------------------------------------*/
 
 
 
