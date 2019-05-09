@@ -1,4 +1,6 @@
-(function() {
+document.addEventListner('DOMContentLoaded', ready);
+                         
+function ready() {
 
   //toggle mobile nav
   const menuOpen = document.querySelector('.menu-open');
@@ -25,4 +27,4 @@
     menuOpen.classList.remove('toggle');
   });
 
-})();
+}
