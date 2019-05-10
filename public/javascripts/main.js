@@ -27,4 +27,27 @@ function ready() {
     menuOpen.classList.remove('toggle');
   });
 
+  //click on any painting
+
+  let paintings = document.querySelectorAll('img');
+  paintings = [...paintings];
+  paintings.forEach(function(painting) {
+    painting.addEventListener('click', function(ev) {
+      const id = ev.target.id;
+      fetch('/showpainting', { 
+        method: 'GET',
+        id: id
+      })
+      .then(function(res) {
+        if (res.ok) {
+          return;
+        }
+        throw new Error('Request failed');
+      })
+      .catch(function(err) {
+        console.log(err);
+      })
+    });
+  });
+
 }
