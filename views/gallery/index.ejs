@@ -5,7 +5,7 @@
         <div class="gallery-wrapper">
         <% products.forEach(function(painting) { %>
             <div class="gallery-item">
-                <img src="<%= painting.imagePath %>" alt="<%= painting.title %> painting">
+                <img src="<%= painting.imagePath %>" alt="<%= painting.title %> painting" id="<%= painting._id %>">
             </div>
         <% }) %>
        
