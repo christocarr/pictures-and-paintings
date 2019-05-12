@@ -141,6 +141,13 @@ nav {
 .toggle {
   display: none;
 }
+/*-----------------user nav styles--------------*/
+
+.dropdown-content {
+  display: none;
+}
+
+/*--------------end user nav styles--------------*/
 
 /*-------------------cart styles------------------*/
 
@@ -158,6 +165,7 @@ nav {
   align-items: center;
   width: 2em;
   height: 70%;
+  margin: 0 1em 0 0;
   color: var(--main-text-color);
 } 
 
