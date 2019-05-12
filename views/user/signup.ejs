@@ -7,10 +7,12 @@
       <input id="email" type="email" name="email">
       <label for="password">Password</label>
       <input id="password" type="password" name="password">
-      <!-- csrfprotection -->
+      <!-- csrf protection -->
       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
       <button type="submit">Signup</button>
     </form>
+    <%= csrfToken %>
     validation errors
   </section>
+
 <% include ../partials/footer %>
