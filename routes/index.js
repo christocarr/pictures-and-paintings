@@ -19,7 +19,7 @@ router.get('/showpainting', (req, res, next) => {
 });
 
 router.get('/user/signup', (req, res, next) => {
-  res.render('user/signup', {csrfToken: req.csrfProtection });
+  res.render('user/signup', {csrfToken: req.csrfToken() });
 });
 
 
