@@ -2,7 +2,7 @@
 
   <section>
     <h3>Signup</h3>
-    <form action="" method="POST">
+    <form action="/user/signup" method="POST">
       <label for="email">Email</label>
       <input id="email" type="email" name="email">
       <label for="password">Password</label>
@@ -11,8 +11,6 @@
       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
       <button type="submit">Signup</button>
     </form>
-    <%= csrfToken %>
-    validation errors
   </section>
 
 <% include ../partials/footer %>

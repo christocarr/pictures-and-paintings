@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+  <section>
+    <h3>Signin</h3>
+    <form action="/user/signin" method="POST">
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email">
+      <label for="password">Password</label>
+      <input id="password" type="password" name="password">
+      <!-- csrf protection -->
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <button type="submit">Signin</button>
+    </form>
+  </section>
+
+<% include ../partials/footer %>
