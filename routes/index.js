@@ -20,8 +20,8 @@ router.get('/showpainting', (req, res, next) => {
 });
 
 router.get('/user/signup', (req, res, next) => {
-  // const messages = req.flash('error');
-  res.render('user/signup', { csrfToken: req.csrfToken() });
+  const messages = req.flash('error');
+  res.render('user/signup', { csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0 });
 });
 
 router.post('/user/signup', passport.authenticate('local.signup', {
@@ -35,8 +35,8 @@ router.get('/user/profile', (req, res, next) => {
 });
 
 router.get('/user/signin', (req, res, next) => {
-  // const messages = req.flash('error');
-  res.render('user/signin', { csrfToken: req.csrfToken() });
+  const messages = req.flash('error');
+  res.render('user/signin', { csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0 });
 });
 
 router.post('/user/signin', passport.authenticate('local.signin', {

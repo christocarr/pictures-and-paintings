@@ -2,7 +2,7 @@
 
   <section>
     <h3>Signup</h3>
-    <form action="/user/signup" method="POST">
+    <form action="/user/signup" method="POST" novalidate>
       <label for="email">Email</label>
       <input id="email" type="email" name="email">
       <label for="password">Password</label>
@@ -10,6 +10,11 @@
       <!-- csrf protection -->
       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
       <button type="submit">Signup</button>
+      <% if (hasErrors) { %>
+        <% messages.forEach(message => { %>
+          <p><%= message %></p>
+        <% }) %>
+      <% } %>
     </form>
   </section>
 
