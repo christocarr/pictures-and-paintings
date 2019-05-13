@@ -52,6 +52,16 @@ passport.use('local.signin', new LocalStrategy({
   passwordField: 'password',
   passReqToCallback: true
 }, (req, email, password, done) => {
+  req.checkBody('email', 'Invalid email').notEmpty().isEmail();
+  req.checkBody('password', 'Invalid password').notEmpty();
+  let errors = req.validationErrors();
+  if (errors) {
+    let messages = [];
+    errors.forEach(error => {
+      messages.push(error.msg);
+    });
+    return done(null, false, req.flash('error', messages));
+  }
   User.findOne({ email: email }, (err, user) => {
     if (err) {
       return done(err);
