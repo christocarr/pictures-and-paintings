@@ -32,6 +32,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use((req, res, next) => {
+  res.locals.login = req.isAuthenticated();
+  next();
+});
+
 app.use('/user', userRoutes); 
 app.use('/', indexRouter); //must have index route last
 
