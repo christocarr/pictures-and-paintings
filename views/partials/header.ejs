@@ -14,7 +14,7 @@
         <a class="menu menu-open"><i class="fas fa-bars"></i></a>
         <a class="menu menu-close toggle"><i class="fas fa-times"></i></a>
         <ul>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="/">Gallery</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact P&P</a></li>
         </ul>
@@ -22,8 +22,7 @@
         <% if (login) { %>
           <a href="/user/profile">Profile</a>
           <a href="user/logout">Logout</a>
-        <% } %>
-        <% if (!login) { %>
+        <% } else { %>
           <a href="/user/signin">Signin</a>
           <a href="/user/signup">Signup</a>
         <% } %>
