@@ -356,7 +356,7 @@ footer ul a:last-of-type {
     margin: 1em 1em 0 0;
   }
 
-  .gallery-item:nth-child(2) {
+  .gallery-item:nth-child(even) {
     margin-right: 0;
   }
 
