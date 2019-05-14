@@ -18,15 +18,15 @@
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact P&P</a></li>
         </ul>
-        <div class="cart-button" >
-          <div class="user-dropdown">
-            <a href="" class="dropdown-btn"><i class="fas fa-user"></i></a>
-            <div class="dropdown-content">
-              <a href="">Profile</a>
-              <a href="">Singin</a>
-              <a href="">Signup</a>
-            </div>
-          </div>
+        <div class="cart-button">
+        <% if (login) { %>
+          <a href="/user/profile">Profile</a>
+          <a href="user/logout">Logout</a>
+        <% } %>
+        <% if (!login) { %>
+          <a href="/user/signin">Signin</a>
+          <a href="/user/signup">Signup</a>
+        <% } %>
           <a href=""><i class="fas fa-shopping-cart"></i></a>
         </div>
       </div>
