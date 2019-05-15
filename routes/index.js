@@ -9,9 +9,8 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/showpainting', (req, res, next) => {
-  res.render('showpainting');
-  console.log(req.params.id)
+router.get('/showpainting/:id', (req, res, next) => {
+  res.render('showpainting', { id: req.params.id });
 });
 
 module.exports = router;
