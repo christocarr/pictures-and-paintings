@@ -9,8 +9,10 @@ router.get('/', function(req, res, next) {
   });
 });
 
-router.get('/showpainting/:id', (req, res, next) => {
-  res.render('showpainting', { id: req.params.id });
+router.get('/showpainting/:id', async (req, res, next) => {
+  const painting = await Product.findById(req.params.id);
+  res.render('showpainting', { painting: painting });
+  
 });
 
 module.exports = router;
