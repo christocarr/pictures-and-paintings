@@ -1,11 +1,21 @@
 <% include ./partials/header %>
 
-  <img src="<%= painting.imagePath %>" alt="painting of <%= painting.title %>">
+  <section>
 
-  <p><%= painting.title %></p>
-  <p><%= painting.medium %></p>
-  <p><%= painting.size %></p>
-  <p><%= painting.price %></p>
+    <div class="product-container">
+      <div>
+        <img src="<%= painting.imagePath %>" alt="painting of <%= painting.title %>">
+      </div>
+      <div class="product-details">
+        <p><%= painting.title %></p>
+        <p><%= painting.medium %></p>
+        <p><%= painting.size %></p>
+        <p><%= painting.price %></p>
+      </div>
+      <button>Add to Cart</button>
+    </div>
+
+  </section>
   
 
 <% include ./partials/footer %>

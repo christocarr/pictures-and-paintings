@@ -180,13 +180,6 @@ nav {
 .toggle {
   display: none;
 }
-/*-----------------user nav styles--------------*/
-
-.dropdown-content {
-  display: none;
-}
-
-/*--------------end user nav styles--------------*/
 
 /*-------------------cart styles------------------*/
 
@@ -311,9 +304,26 @@ nav {
             end gallery section styles
 -------------------------------------------*/
 
+/*-------------------------------------------
+               product styles
+-------------------------------------------*/
 
+  .product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 80%;
+    margin: auto;
+  }
 
+  .product-container img {
+    width: 100%;
+  }
 
+/*-------------------------------------------
+               end product styles
+-------------------------------------------*/
 
 /*-------------------------------------------
                footer styles
