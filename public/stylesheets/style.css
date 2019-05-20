@@ -202,11 +202,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 2em;
+  width: 2m;
   height: 70%;
   margin: 0 1em 0 0;
   color: var(--main-text-color);
 } 
+
+.cart-button a:first-of-type {
+  margin-right: 0.4em;
+}
 
 .cart {
   position: absolute;
