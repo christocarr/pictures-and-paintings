@@ -7,12 +7,16 @@
         <img src="<%= painting.imagePath %>" alt="painting of <%= painting.title %>">
       </div>
       <div class="product-details">
-        <p><%= painting.title %></p>
-        <p><%= painting.medium %></p>
-        <p><%= painting.size %></p>
-        <p><%= painting.price %></p>
+        <ul>
+          <li><%= painting.title %></li>
+          <li><%= painting.medium %></li>
+          <li><%= painting.size %></li>
+        </ul>
+        <div class="price-button">
+          <p>£<%= painting.price %></p>
+          <button>Add to Cart</button>
+        </div>
       </div>
-      <button>Add to Cart</button>
     </div>
 
   </section>

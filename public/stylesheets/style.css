@@ -311,14 +311,34 @@ nav {
   .product-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     max-width: 80%;
     margin: auto;
+    padding: 0.5em;
+    border: 1px solid var(--main-border-color);
+  }
+
+  .product-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5em 0 0 0;
+    padding: 0.5em;
+    border: 1px solid var(--main-border-color);
+  }
+
+  .product-details li {
+    font-size: 0.8em;
   }
 
   .product-container img {
     width: 100%;
+  }
+
+  .price-button {
+    display: flex;
+    flex-direction: column;
+    
+    align-self: flex-end;
   }
 
 /*-------------------------------------------
@@ -411,6 +431,10 @@ footer ul a:last-of-type {
 
   .gallery-item:nth-child(even) {
     margin-right: 0;
+  }
+
+  .product-details li {
+    font-size: 1em;
   }
 
   .form-wrapper form {
