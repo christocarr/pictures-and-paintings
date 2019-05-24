@@ -123,6 +123,12 @@ footer {
   padding: 1em 0 2em 0;
 }
 
+label,
+input {
+  display: block;
+  margin: 0.5em 0 0 0;
+}
+
 /*-------------------------------------------
                 nav styles
 -------------------------------------------*/
@@ -302,6 +308,28 @@ nav {
 
 /*-------------------------------------------
             end gallery section styles
+-------------------------------------------*/
+
+/*-------------------------------------------
+        register and signin styles
+-------------------------------------------*/
+
+.register, 
+.signin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+}
+
+.register h3, 
+.signin h3 {
+  margin: 2em 0 0 0;
+}
+
+/*-------------------------------------------
+      end of register and signin styles
 -------------------------------------------*/
 
 /*-------------------------------------------
