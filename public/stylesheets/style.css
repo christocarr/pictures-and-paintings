@@ -19,6 +19,8 @@
   --h2-font-size: 1.5em;
   --h3-font-size: 1.2em;
   --p-font-size: 1em;
+  --prdct-details-sm: 0.8em;
+  --prdct-details-lg: 1em;
 }
 
 
@@ -127,6 +129,16 @@ label,
 input {
   display: block;
   margin: 0.5em 0 0 0;
+}
+
+button {
+  border-style: none;
+  margin: 0.5em 0 0 0;
+  padding: 0.5em;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /*-------------------------------------------
@@ -288,7 +300,6 @@ nav {
   width: 80%;
   margin: 1em 0 0 0;
   overflow: hidden;
-
 }
 
 .gallery-item:last-of-type {
@@ -362,7 +373,7 @@ nav {
 }
 
 .product-details li {
-  font-size: 0.8em;
+  font-size: var(--prdct-details-sm);
 }
 
 .product-container img {
@@ -473,7 +484,7 @@ footer ul a:last-of-type {
   }
 
   .product-details li {
-    font-size: 1em;
+    font-size: var(--prdct-details-lg);
   }
 
   .form-wrapper form {
