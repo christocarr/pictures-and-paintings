@@ -128,7 +128,7 @@ footer {
 form {
   border: solid 1px var(--main-border-color);
   margin: 1em 0 0 0;
-  padding: 0.5em;
+  padding: 1em;
 }
 
 label,
@@ -230,13 +230,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 70%;
-  margin: 0 0.5em 0 0;
-  padding: 0.5em;
+  padding: 0.3em;
   color: var(--main-text-color);
 } 
 
-.cart-button a:first-of-type {
-  margin-right: 0.4em;
+.cart-button a:last-of-type {
+  margin-left: 0.5em;
 }
 
 .cart {
