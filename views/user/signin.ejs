@@ -9,12 +9,12 @@
       <input id="password" type="password" name="password">
       <!-- csrf protection -->
       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-      <button type="submit">Signin</button>
       <% if (hasErrors) { %>
         <% messages.forEach(message => { %>
-          <p><%= message %></p>
+          <p class="error-message"><%= message %></p>
         <% }) %>
       <% } %>
+      <button type="submit">Signin</button>
     </form>
   </section>
 
