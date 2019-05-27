@@ -1,0 +1,34 @@
+<% include ./partials/header %>
+
+  <section class="cart">
+    
+    <% if (products) { %>
+      <div>
+        <ul class="cart-item-list">
+          <% products.forEach(function(product) { %>
+            <li class="cart-product">
+              <img src="<%= product.item.imagePath %>" alt="<%= product.item.title %>" />
+              <div class="cart-product-details">
+                <div class="cart-product-description">
+                  <p><%= product.item.title %></p>
+                  <p>£<%= product.price %></p>
+                </div>
+                <button>Remove</button>
+              </div>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="cart-checkout">
+        <p>Total: £<%= totalPrice %></p>
+      </div>
+      <button>Checkout</button>
+    <% } else { %>
+      <div>
+        <p>No items in cart</p>
+      </div>
+    <% } %>
+    
+  </section>
+  
+<% include ./partials/footer %>
