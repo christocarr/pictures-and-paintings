@@ -401,7 +401,49 @@ nav {
 /*-------------------------------------------
                end product styles
 -------------------------------------------*/
+/*-------------------------------------------
+            shopping cart styles
+-------------------------------------------*/
 
+.cart {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 80%;
+  margin: auto;
+}
+
+.cart img {
+  width: 100%;
+}
+
+.cart-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 0 0;
+}
+
+.cart-product-details {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-product-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-checkout {
+  margin: 1em 0 0 0;
+  border-top: solid 1px var(--main-border-color);
+}
+
+/*-------------------------------------------
+          end shopping cart styles
+-------------------------------------------*/
 /*-------------------------------------------
                footer styles
 -------------------------------------------*/
