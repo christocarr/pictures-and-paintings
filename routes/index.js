@@ -33,4 +33,12 @@ router.get('/add-to-cart/:id', (req, res, next) => {
   });
 });
 
+router.get('/cart', (req, res, next) => {
+  if (!req.session.cart) {
+    return res.render('cart', { products: null });
+  }
+  let cart = new Cart(req.session.cart);
+  res.render('cart', { products: cart.generateArr(), totalPrice: cart.totalPrice });
+});
+
 module.exports = router;
