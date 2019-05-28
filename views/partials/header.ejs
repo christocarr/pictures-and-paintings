@@ -36,7 +36,12 @@
           <a href="/user/signin">Signin</a>
           <a href="/user/signup">Signup</a>
         <% } %>
-          <a href=""><i class="fas fa-shopping-cart"></i><span><%= session.cart.totalQty %></span></a>
+          <a href="/cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>
+              <%= session.cart.totalQty %>
+            </span>
+          </a>
         </div>
       </div>
     </nav>
