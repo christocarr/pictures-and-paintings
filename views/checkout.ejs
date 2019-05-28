@@ -4,8 +4,10 @@
 
     <h3>Checkout</h3>
     <h4>Total: £<%= total %></h4>
-    <form method="post" action="/checkout" id="checkout">
-      <label for="name">Name</label>
+    <div id="error">
+    </div>
+    <form method="post" action="/checkout" id="checkoutForm">
+      <label for="name">Full Name</label>
       <input id="name" name="name" type="text" required autofocus>
       <label for="houseNumber">House Number</label>
       <input id="houseNumber" name="house-number" type="text" required>
@@ -14,16 +16,21 @@
       <label for="postCode">Post Code</label>
       <input id="postCode" name="post-code" type="text" required>
       <label for="cardHolderName">Card Holder Name</label>
-      <input id="cardHolderName" name="card-holder-name" type="text" required>
+      <input id="cardHolderName" type="text" required>
       <label for="cardNumber">Credit Card Number</label>
-      <input id="cardNumber" name="card-number" type="text" required>
-      <label for="expiration">Exp Month/Year</label>
-      <input id="expiration" name="expiration" type="text" required>
+      <input id="cardNumber" type="text" required>
+      <label for="expMonth">Expiry Month</label>
+      <input id="expMonth" type="text" required>
+      <label for="expYear">Expiry Year</label>
+      <input id="expYear" type="text" required>
       <label for="cvc">CVC</label>
       <input id="cvc" name="cvc" type="text" required>
-      <a href="/"><button type="submit">Pay</button></a>
+      <button id="payButton" type="submit">Pay</button>
     </form>
     
   </section>
   
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script type="text/javascript" src="javascripts/checkout.js"></script>
+
 <% include ./partials/footer %>
