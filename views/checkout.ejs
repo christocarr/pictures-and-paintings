@@ -1,0 +1,29 @@
+<% include ./partials/header %>
+
+  <section class="cart">
+
+    <h3>Checkout</h3>
+    <h4>Total: £<%= total %></h4>
+    <form method="post" action="/checkout" id="checkout">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required autofocus>
+      <label for="houseNumber">House Number</label>
+      <input id="houseNumber" name="house-number" type="text" required>
+      <label for="street">Street</label>
+      <input id="street" name="street" type="text">
+      <label for="postCode">Post Code</label>
+      <input id="postCode" name="post-code" type="text" required>
+      <label for="cardHolderName">Card Holder Name</label>
+      <input id="cardHolderName" name="card-holder-name" type="text" required>
+      <label for="cardNumber">Credit Card Number</label>
+      <input id="cardNumber" name="card-number" type="text" required>
+      <label for="expiration">Exp Month/Year</label>
+      <input id="expiration" name="expiration" type="text" required>
+      <label for="cvc">CVC</label>
+      <input id="cvc" name="cvc" type="text" required>
+      <a href="/"><button type="submit">Pay</button></a>
+    </form>
+    
+  </section>
+  
+<% include ./partials/footer %>
