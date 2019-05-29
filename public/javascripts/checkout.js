@@ -4,20 +4,20 @@ Stripe.setPublishableKey('pk_test_yhtHDVWfKf7IAv8w8yu3QudS00khZiiTIa');
 
 const checkoutForm = document.querySelector('#checkoutForm');
 const payButton = document.querySelector('#payButton');
-const cardNumber = document.querySelector('#cardNumber').value;
-const cvc = document.querySelector('#cvc').value;
-const expMonth = document.querySelector('#expMonth').value;
-const expYear = document.querySelector('#expYear').value;
+const cardNumber = document.querySelector('#cardNumber');
+const cvc = document.querySelector('#cvc');
+const expMonth = document.querySelector('#expMonth');
+const expYear = document.querySelector('#expYear');
 const errorContainer = document.querySelector('#error');
 
 checkoutForm.addEventListener('submit', () => {
   event.preventDefault();
   payButton.disabled = true;
   Stripe.card.createToken({
-    number: cardNumber,
-    cvc: cvc,
-    exp_month: expMonth,
-    exp_year: expYear
+    number: cardNumber.value,
+    cvc: cvc.value,
+    exp_month: expMonth.value,
+    exp_year: expYear.value
   }, stripeResponseHandler);
   return false;
 });
