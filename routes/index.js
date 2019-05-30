@@ -65,7 +65,7 @@ router.post('/checkout', (req, res, next) => {
   // Token is created using Checkout or Elements!
   // Get the payment token ID submitted by the form:
   const token = req.body.stripeToken; // Using Express
-  
+
   (async () => {
     try {
       const charge = await stripe.charges.create({
@@ -80,7 +80,7 @@ router.post('/checkout', (req, res, next) => {
       return res.redirect('/checkout');
     } 
     req.flash('success', 'Successfully bought product');
-    req.cart = null;
+    req.session.cart = null;
     res.redirect('/');
   })();
 
