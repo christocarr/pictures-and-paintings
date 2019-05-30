@@ -34,7 +34,7 @@ function stripeResponseHandler(status, res) {
    } else { // Token was created!
  
      // Get the token ID:
-     let token = response.id;
+     let token = res.id;
  
      // Insert the token into the form so it gets submitted to the server:
      let input = document.createElement('input');

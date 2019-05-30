@@ -65,14 +65,14 @@ router.post('/checkout', (req, res, next) => {
   // Token is created using Checkout or Elements!
   // Get the payment token ID submitted by the form:
   const token = req.body.stripeToken; // Using Express
-
+  
   (async () => {
     try {
       const charge = await stripe.charges.create({
       amount: cart.totalPrice * 100,
       currency: 'gbp',
       description: 'Example charge',
-      source: token.id,
+      source: token,
       metadata: {order_id: 6735},
       });  
     } catch(err) {
