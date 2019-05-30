@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Product = require('../models/product');
 const Cart = require('../models/cart');
+const Order = require('../models/order');
 
 // GET home page
 router.get('/', function(req, res, next) {
@@ -67,21 +68,38 @@ router.post('/checkout', (req, res, next) => {
   const token = req.body.stripeToken; // Using Express
 
   (async () => {
+    let charge;
     try {
-      const charge = await stripe.charges.create({
+      charge = await stripe.charges.create({
       amount: cart.totalPrice * 100,
       currency: 'gbp',
       description: 'Example charge',
       source: token,
       metadata: {order_id: 6735},
-      });  
+      });
     } catch(err) {
       req.flash('error', err.message);
       return res.redirect('/checkout');
-    } 
-    req.flash('success', 'Successfully bought product');
-    req.session.cart = null;
-    res.redirect('/');
+    }
+    const order = new Order({
+      user: req.user,
+      cart: cart,
+      address: req.body.street,
+      city: req.body.city,
+      post_code: req.body.post_code,
+      country: req.body.country,
+      name: req.body.name,
+      paymentId: charge.id
+    });
+    order.save((err, result) => {
+      if (err) {
+        req.flash('error', err.message);
+        return res.redirect('/checkout');
+      }
+      req.flash('success', 'Successfully bought product');
+      // req.session.cart = null;
+      res.redirect('/');
+    });
   })();
 
 });
